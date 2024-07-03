@@ -1,0 +1,99 @@
+
+/* Ajout de styles spécifiques pour index.html */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+.container-all {
+    /* background-color: #007bff; */
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+
+.header-nav {
+    background-color: white;
+    height: 120px;
+    padding-top: 20px;
+    min-height: 60px;
+}
+
+.header-nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.header-nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+.header-nav li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+.header-nav #branding {
+    float: left;
+}
+
+.header-nav #branding h5{
+    font-size: 14px;
+    padding: 30px 105px;
+    color: blueviolet;
+}
+.header-nav nav {
+    float: right;
+    margin-top: 10px;
+}
+
+
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #0056b3;
+}
+.footer {
+    margin-top: 430px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+
+}

@@ -1,0 +1,375 @@
+/* Ajout de styles spécifiques pour index.html */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color:  #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+.current-time{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    z-index: 1000;
+}
+.hour-now p {
+    margin: 10px;
+    color:#adadad;
+}
+
+.container-all {
+    /* background-color: #007bff; */
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.header-nav {
+    background-color: white;
+    height: 120px;
+    padding-top: 20px;
+    min-height: 60px;
+}
+
+.header-nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.header-nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+.header-nav li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+.header-nav #branding {
+    float: left;
+}
+
+.header-nav #branding h5{
+    font-size: 14px;
+    padding: 30px 105px;
+    color: blueviolet;
+}
+.header-nav nav {
+    float: right;
+    margin-top: 10px;
+}
+
+.showcase {
+    background-color: #adadad50;
+    float: left;
+    min-height: 400px;
+    text-align: center;
+    color: #fff;
+    width: 20%;
+}
+
+.showcase h1 {
+    margin-top: 100px;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.showcase p {
+    font-size: 20px;
+}
+.showcase .form-container {
+    padding: 20px;
+    border-radius: 8px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    width: 300px;
+}
+
+.showcase .form-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.showcase .form-container input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.showcase .form-container select{
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.showcase .form-container button {
+    width: 80%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.showcase .form-container button:hover {
+    background-color: #0056b3;
+}
+
+
+.card {
+    background: #fff;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33% - 40px);
+    text-align: center;
+}
+
+.card h3 {
+    margin-bottom: 20px;
+}
+
+.card a {
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.card a:hover {
+    background: #333;
+    color: #fff;
+}
+
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+
+/* part 2 */
+.main-content {
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%;
+    height: 600px;
+    overflow-y: auto;
+}
+.timeline-container {
+    overflow-y: hidden;
+    overflow-x: auto; /* Permet le défilement horizontal si le contenu dépasse la largeur */
+    white-space: nowrap; /* Empêche le contenu de passer à la ligne */
+    /* background-color: red; */
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    padding: 20px;
+    /* background-color: red; */
+    border: 1px solid #ddd;
+    display: flex;
+
+}
+
+.track-labels {
+    width: 100px; /* Ajuster si nécessaire */
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.track-label {
+    height: 50px; /* Ajuster si nécessaire */
+    /* background-color: #f3f3f3; */
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrer le texte de l'étiquette */
+    margin-bottom: 20px; /* Correspondre à la marge de .track */
+}
+
+.timeline-content {
+    flex: 1;
+    position: relative;
+}
+
+.timeline-header {
+    display: flex;
+    height: 40px; /* Ajuster si nécessaire */
+    /* margin-left: 100px; Correspondre à la largeur de .track-labels */
+}
+
+.time-label {
+    width: 4.1667%; /* 100% / 24 / 4 */
+    text-align: center;
+    /* background-color: #ffc107; */
+    position: relative;
+    overflow: visible; /* Permet de voir le pseudo-élément ::after */
+    z-index: 1; /* Assurer que le pseudo-élément ne se superpose pas au contenu */
+}
+
+.time-label::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%; /* Positionner la ligne au milieu de l'étiquette de temps */
+    transform: translateX(-50%);
+    width: 1px;
+    height: calc(200vh - 130px); /* Hauteur maximale de la timeline - ajustez selon vos besoins */
+    background-color: #ccc; /* Couleur de fond de la ligne */
+}
+
+.timeline-body {
+    position: relative;
+    /* margin-left: 100px; Correspondre à la largeur de .track-labels */
+}
+
+.track {
+    position: relative;
+    height: 50px; /* Ajuster si nécessaire */
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    margin-left: 23px;
+}
+#current-time-bar {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: red;
+    z-index: 10;
+}
+.train {
+    position: absolute;
+    top: 0;
+    height: 100%; /* Assurez-vous que cela correspond à la hauteur de la voie */
+    color: white;
+    text-align: center;
+    line-height: 50px; /* Assurez-vous que cela correspond à la hauteur du train */
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.train:hover{
+    box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.1);
+
+}
+
+.track-out-of-service {
+    background: repeating-linear-gradient(
+        45deg,
+        #ff0000,
+        #ff0000 10px,
+        #fff 10px,
+        #fff 20px
+    );
+}
+
+.track-maintenance {
+    background: repeating-linear-gradient(
+        45deg,
+        #ccc,
+        #ccc 10px,
+        #fff 10px,
+        #fff 20px
+    );
+}
+
+.small-interval {
+    /* Styles spécifiques pour les intervalles de 15 minutes */
+    font-size: 10px;
+    color: #999;
+    margin-top: 20px;
+}
+
+
+
+
+
+/*
+.timeline-body {
+
+            white-space: nowrap; 
+            display: flex;
+            flex-direction: column;
+            width: 295%;
+            
+        }
+        
+        .timeline-header {
+            width: 295%;
+            display: flex;
+        }
+        
+        .time-label {
+
+            display: inline-block;
+            text-align: center;
+            width: 10%; 
+            font-size: 12px;
+            color: #555;
+            flex: 1;
+            text-align: center;
+            font-weight: bold;
+        }
+        .full-hour {
+            font-weight: bold;
+            color: #0056b3;
+        }
+        .small-interval {
+            font-size: 10px;
+            color: #999;
+        }
+                
+        .track {
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: 50px;
+            border-bottom: 1px solid #ddd;
+         }
+        
+        .track-label {
+            padding: 0 10px;
+            background-color: #f5f5f5;
+            border-right: 1px solid #ddd;
+
+        }
+        
+        .train {
+            position: absolute;
+            top: 50%;
+            height: 20px;
+            transform: translateY(-50%);
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .train.in-service {
+            background-color: #007bff;
+        }
+        
+        .train.maintenance {
+            background-color: #ffc107;
+            background-image: linear-gradient(45deg, rgba(255, 193, 7, 0.5) 25%, transparent 25%, transparent 50%, rgba(255, 193, 7, 0.5) 50%, rgba(255, 193, 7, 0.5) 75%, transparent 75%, transparent);
+            background-size: 10px 10px;
+        }
+        
+        .train-label {
+            padding: 0 5px;
+        }  */
